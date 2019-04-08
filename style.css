@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body,html{
+    height: 250px;
+    width: 300px;
+}
+
+.ad_box{
+    height: 250px;
+    width: 300px;
+    cursor: pointer;
+    touch-action: auto;
+    overflow: hidden;
+    background-image: url("images/bg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.element_1,.element_2,.element_3{
+    position: absolute;
+    top: 0;
+}
+.element_1{
+    top: 0px;
+    left: -15px;
+    animation: wind 5s infinite;
+}
+
+.element_2{
+    top: 0px;
+    left: 45px;
+    animation: shake 2s infinite;
+}
+
+.element_3{
+    left: 125px;
+    top: 0px;
+    animation: wind 5s infinite;
+}
+
+.element_4{
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    z-index: 2000;
+}
+
+.spinner{
+    position: absolute;
+    top: 100px;
+    left: 150px;
+    animation: spin 8s infinite linear;
+}
+
+
+@keyframes spin {
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+/*.imag:hover{*/
+    /*-webkit-transform: scaleX(-1);*/
+    /*transform: scaleX(-1);*/
+/*}*/
+
+
+.slide{
+    animation: slide 2s ease-out infinite;
+}
+
+@keyframes slide {
+    0%,100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.95);
+    }
+}
+
+
+@keyframes wind {
+    0%,100%{
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+    50%{
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+    }
+}
+
+
+/*@keyframes shake {*/
+    /*0%,100%{*/
+        /*-webkit-transform: translateX(3px) scale(0.9);*/
+        /*transform: translateX(3px) scale(0.9);*/
+    /*}*/
+    /*50%{*/
+        /*-webkit-transform: translateX(-3px) scale(1);*/
+        /*transform: translateX(-3px) scale(1);*/
+    /*}*/
+/*}*/
